@@ -1,0 +1,798 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/favicons.png' %}" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+    <style>
+        .navbar{
+            background-color:#311E25 !important;
+        }
+        .logo{
+            color: #DB9A65;
+            font-weight: bolder;
+            font-size: 28px;
+            margin-left: 70px;
+        }
+
+        .nav-link{
+            color: #DB9A65!important;
+            font-size: 18px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #nav-link1{
+            margin-left: 250px !important;
+        }
+
+        .btn-info{
+            margin-left: 150px;
+            background-color: #311E25 !important;
+            border-color: #DB9A65 !important;
+            border-radius: 0px;
+            color: #DB9A65;
+            width: 180px;
+        }
+
+        .btn-info:hover{
+            background-color: #DB9A69 !important;
+        }
+
+        #container-1{
+            background-color: #311E25;
+            height: 627px;
+        }
+
+        #pattern{
+            margin-top: -610px;
+            height: 611px;
+            width: 1530px;
+        }
+
+        #photo{
+            margin-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .text-1{
+            color: white;
+            margin-top: 250px !important;
+            font-size: 55px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            margin-left: 100px;
+        }
+
+        .text-2{
+            color: #DB9A69;
+            margin-top: 10px;
+            font-size: 35px;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 100px;
+        }
+
+        #container-2{
+            background-color: #311E25;
+            height: 1200px;
+        }
+
+        .heading-1{
+            color: white;
+            font-size: 35px;
+            font-weight: bolder;
+            font-family: Roboto,sans-serif;
+            margin-top: 110px;
+        }
+
+        .heading-2{
+            color: white;
+            font-size: 35px;
+            font-weight: bolder;
+            font-family: Roboto,sans-serif;
+            margin-top: 7px !important;
+        }
+
+        .description-1{
+            color: darkgrey;
+            margin-top: 70px;
+        }
+
+        .btn-light{
+            margin-top: 50px;
+            margin-left: 150px;
+            background-color: #311E25 !important;
+            border-color: #DB9A65 !important;
+            border-radius: 0px;
+            color: #DB9A65;
+            width: 180px;
+        }
+
+        .btn-light:hover{
+            background-color: #DB9A65 !important;
+            color: white !important;
+        }
+
+        .title-1{
+            margin-top: 70px;
+            margin-bottom: 10px !important;
+            color: white;
+        }
+
+        .title-2{
+            margin-top: 30px !important;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .progress-bar{
+            height: 6px;
+            background-color: #DB9A65 !important;
+        }
+
+        .progress{
+            height: 6px;
+            width: 400px;
+        }
+
+        #container-3{
+            background-color: #413036;
+            height: 600px;
+        }
+
+        .title-3{
+            color: white;
+            margin-top: 100px;
+            font-family: Roboto,sans-serif;
+            font-weight: bolder;
+        }
+
+        .grid{
+            margin-top: 70px;
+            border: 1px solid #63442b;
+            padding-bottom: 50px;
+        }
+
+        .grid-icon{
+            margin-left: 130px !important;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .title-4{
+            color: #DB9A69;
+            margin-left: 30px;
+        }
+
+        .title-6{
+            color: #DB9A69;
+            margin-left: 90px;
+        }
+
+        .title-5{
+            color: #DB9A69;
+            margin-left: 50px;
+        }
+
+        #container-4{
+            background-color: #311E25;
+            height: 1350px;
+        }
+
+        .project-image-1{
+            width: 400px;
+            height: 230px;
+            margin-top: 50px;
+        }
+
+        .project-title{
+            color: white;
+            margin-top: 25px;
+            font-family: Roboto,sans-serif;
+            font-weight: bolder;
+        }
+
+        .project-main-title{
+            color: #DB9A69;
+            margin-top: 10px;
+            font-family: Roboto,sans-serif;
+            font-weight: bolder;
+        }
+
+        .project-link{
+            text-decoration: none !important;
+        }
+
+        #container-5{
+            background-color: #622e41;
+            height: 550px;
+        }
+
+        .btn-dark{
+            background-color: #622e41;
+            border: 1px solid #DB9A65;
+            border-radius: 0px;
+            width: 250px;
+            height: 55px;
+            font-size: 20px;
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .btn-dark:hover{
+            background-color: #DB9A69;
+        }
+
+        .fa-instagram{
+            margin-left: 75px !important;
+        }
+
+        .fa-whatsapp{
+            margin-left: 75px !important;
+        }
+
+        .fa-linkedin{
+            margin-left: 75px !important;
+        }
+
+        #footer{
+            color: white;
+            margin-top: 150px;
+        }
+
+
+        @media (max-width: 768px){
+            .logo{
+                color: #DB9A65;
+                font-weight: bolder;
+                font-size: 28px;
+                margin-left: 30px;
+            }
+
+            .nav-link{
+                color: #DB9A65!important;
+                font-size: 18px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+
+            #nav-link1{
+                margin-left: 21px !important;
+                margin-top: 20px;
+            }
+
+            .btn-info{
+                margin-left: 20px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background-color: #311E25 !important;
+                border-color: #DB9A65 !important;
+                border-radius: 0px;
+                color: #DB9A65;
+                width: 180px;
+            }
+
+            .btn-info:hover{
+                background-color: #DB9A69 !important;
+            }
+
+            .container-fluid{
+                background-color: #311E25;
+                height: 735px;
+            }
+
+            #pattern{
+                margin-top: -1500px;
+                height: 1500px;
+                width: 320px;
+            }
+
+            #photo{
+                width: 300px;
+                margin-top: 80px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            .text-1{
+                color: white;
+                margin-top: 150px !important;
+                font-size: 40px;
+                font-weight: bolder;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin-left: 10px !important;
+            }
+
+            .text-2{
+                color: #DB9A69;
+                margin-top: 20px;
+                font-size: 30px;
+                font-weight: bolder;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin-left: 10px !important;
+            }
+
+            #container-2{
+                background-color: #311E25;
+                height: 2100px;
+            }
+
+            .heading-1{
+                color: white;
+                font-size: 35px;
+                font-weight: bolder;
+                font-family: Roboto,sans-serif;
+                padding-top: 110px !important;
+            }
+
+            .heading-2{
+                color: white;
+                font-size: 35px;
+                font-weight: bolder;
+                font-family: Roboto,sans-serif;
+                margin-top: 7px !important;
+            }
+
+            .description-1{
+                color: darkgrey;
+                margin-top: 70px;
+            }
+
+            .btn-light{
+                margin-top: 50px;
+                background-color: #311E25 !important;
+                border-color: #DB9A65 !important;
+                border-radius: 0px;
+                color: #DB9A65;
+                width: 180px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            .btn-light:hover{
+                background-color: #DB9A65 !important;
+                color: white !important;
+            }
+
+            .title-1{
+                margin-left: 25px;
+                margin-top: 70px;
+                margin-bottom: 10px !important;
+                color: white;
+            }
+
+            .title-2{
+                margin-left: 25px;
+                margin-top: 30px !important;
+                margin-bottom: 10px;
+                color: white;
+            }
+
+
+            .progress-bar{
+                height: 6px;
+                background-color: #DB9A65 !important;
+            }
+
+            .progress{
+                height: 6px;
+                width: 250px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            #container-3{
+                background-color: #413036;
+                height: 1150px;
+            }
+
+            .title-3{
+                color: white;
+                margin-top: 100px;
+                font-family: Roboto,sans-serif;
+                font-weight: bolder;
+            }
+
+            .grid{
+                margin-top: 70px;
+                border: 1px solid #63442b;
+                padding-bottom: 50px;
+            }
+
+            .grid-icon{
+                margin-left: 110px !important;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .title-4{
+                color: #DB9A69;
+                font-size: 25px !important;
+                margin-left: 25px;
+            }
+
+            .title-5{
+                color: #DB9A69;
+                font-size: 25px !important;
+                margin-left: 40px !important;
+            }
+
+            .title-6{
+                color: #DB9A69;
+                margin-left: 55px;
+            }
+
+            #container-4{
+                background-color: #311E25;
+                height: 2150px;
+            }
+
+            .project-image-1{
+                width: 300px;
+                height: 230px;
+                margin-top: 50px;
+            }
+
+            .project-title{
+                color: white;
+                margin-top: 25px;
+                font-family: Roboto,sans-serif;
+                font-weight: bolder;
+            }
+
+            .project-main-title{
+                color: #DB9A69;
+                margin-top: 10px;
+                font-family: Roboto,sans-serif;
+                font-weight: bolder;
+            }
+
+            .project-link{
+                text-decoration: none !important;
+            }
+
+            #container-5{
+                background-color: #622e41;
+                height: 800px;
+            }
+
+            .btn-dark{
+                background-color: #622e41;
+                border: 1px solid #DB9A65;
+                border-radius: 0px;
+                width: 250px;
+                height: 55px;
+                font-size: 20px;
+                margin-top: 40px !important;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            .btn-dark:hover{
+                background-color: #DB9A69;
+            }
+
+            .fa-instagram{
+                margin-left: 75px !important;
+            }
+
+            .fa-whatsapp{
+                margin-left: 75px !important;
+            }
+
+            .fa-linkedin{
+                margin-left: 75px !important;
+            }
+
+            #footer{
+                color: white;
+                margin-top: 100px;
+            }
+
+
+
+
+        }
+
+     
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"><span class="logo">ARUN.</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#container-1" id="nav-link1">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#container-2">About Me</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#container-3">Services</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#container-5">Contact</a>
+            </li>
+
+            <a href="https://api.whatsapp.com/send?phone=918848193954&text=Hello%20Arun." class="btn btn-info">Let's Talk</a>
+
+          </ul>
+           
+            
+            
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="container-1">
+        <div class="row">
+            <div class="col-xs-6 col-lg-6">
+                <h1 class="text-1">Hi There, IAM Arun</h1>
+                <h1 class="text-2">Python Full Stack Developer</h1>
+            </div>
+
+            <div class="col-xs-6 col-lg-6">
+                <img src="{% static 'images/me.png' %}" id="photo">
+            </div>
+
+            <img src="{% static 'images/pattern_icon.png' %}" id="pattern">
+
+           
+        </div>
+    </div>
+
+    <div class="container-fluid" id="container-2">
+        <div class="row">
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-10 col-lg-10">
+                <h3 class="heading-1">I'm a Python Full Stack Developer based in Kerala, who loves clean, </h3> <h3 class="heading-2">efficient, and scalable code. I also enjoy enjoy crafting.</h3>
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-5 col-lg-5">
+                <p class="description-1">I am a passionate Python Full Stack Developer based in Kerala with expertise in Django, MySQL, PostgreSQL, and frontend technologies like HTML, CSS, and JavaScript. With experience in building business websites, web applications, and CRM solutions, I focus on creating scalable and efficient digital solutions. I have worked on multiple projects, including eCommerce platforms and blood donation systems, and have a strong background in API development, Git, and cloud deployment. As a freelancer, I also specialize in digital marketing and graphic design. Driven by innovation, I strive to craft seamless user experiences and robust backend systems.</p>
+            
+                <a href="{% static 'images/Arun_Pacheeri_CV.pdf'%}" class="btn btn-light" download>Download CV</a>
+            
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <h6 class="title-1">HTML</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">CSS</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">JavaScript</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">Python</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">Django</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">MySQL</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">PostgreSQL</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">SQLite</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">MySQL</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">CRUD</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">REST</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">Postman API</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h6 class="title-2">Git & GitHub</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="container-3">
+        <div class="row">
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <h1 class="title-3">My Services</h1>
+            </div>
+
+            <div class="col-xs-7 col-lg-7"></div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <img src="{% static 'images/1.svg' %}" class="grid-icon">
+                    <h3 class="title-4">Web & Mobile Design</h3>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <img src="{% static 'images/2.svg' %}" class="grid-icon">
+                    <h3 class="title-5">Web Development</h3>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="grid">
+                    <img src="{% static 'images/3.svg' %}" class="grid-icon">
+                    <h3 class="title-6">E-commerce</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="container-4">
+        <div class="row">
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <h1 class="title-3">My Works</h1>
+            </div>
+
+            <div class="col-xs-7 col-lg-7"></div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <img src="{% static 'images/1.png' %}" class="project-image-1">
+                <h6 class="project-title">Mobile & Web App</h6>
+                <a href="https://crm-project-vzl8.onrender.com/home/" class="project-link"><h3 class="project-main-title">CRM Project</h3></a>
+            </div>
+
+            <div class="col-xs-4 col-lg-4">
+                <img src="{% static 'images/2.png' %}" class="project-image-1">
+                <h6 class="project-title">Mobile & Web App</h6>
+                <a href="https://beyond-yamt.onrender.com/" class="project-link"><h3 class="project-main-title">E-commerce Project</h3></a>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <img src="{% static 'images/3.png' %}" class="project-image-1">
+                <h6 class="project-title">Mobile & Web App</h6>
+                <a href="https://github.com/arunp007/Blood_Donation_System" class="project-link"><h3 class="project-main-title">Blood Donation System Project</h3></a>
+            </div>
+
+            <div class="col-xs-4 col-lg-4">
+                <img src="{% static 'images/4.png' %}" class="project-image-1">
+                <h6 class="project-title">Mobile & Web App</h6>
+                <a href="https://github.com/arunp007/G-shop" class="project-link"><h3 class="project-main-title">E-commerce Project</h3></a>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <img src="{% static 'images/5.png' %}" class="project-image-1">
+                <h6 class="project-title">Mobile & Web App</h6>
+                <a href="https://restore-hub.onrender.com/" class="project-link"><h3 class="project-main-title">E-commerce Project</h3></a>
+            </div>
+
+            <div class="col-xs-4 col-lg-4">
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="container-5">
+        <div class="row">
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-4 col-lg-4">
+                <h1 class="title-3">My Social Media Links</h1>
+            </div>
+
+            <div class="col-xs-7 col-lg-7"></div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-3 col-lg-3">
+                <a href="https://api.whatsapp.com/send?phone=918848193954&text=Hello%20Arun." class="btn btn-dark">Whatsapp <span class="fa fa-whatsapp"></span></a>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <a href="https://www.instagram.com/codemaster8848/" class="btn btn-dark">Instagram <span class="fa fa-instagram"></span></a>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <a href="https://www.linkedin.com/in/arun-pacheeri-302480190/" class="btn btn-dark">LinkedIn <span class="fa fa-linkedin"></span></a>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-3 col-lg-3"></div>
+
+            <div class="col-xs-8 col-lg-8" id="footer">
+                <p>Copyright ©2025 All rights reserved | This template is made with  by Arun Pacheeri</p>
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+ 
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+</body>
+</html>
